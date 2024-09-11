@@ -60,4 +60,7 @@ However, upon closer look, it seems that all this does is set the `id` property 
 I learned that if you use `datastore.items()` (**items**, plural), it will load all items, but it won't load the fine details of fields that are `file` data type. All it loads in this case seems to be just the `id` property of the file.
 If you instead use `datastore.item(item_id)`, it will load all the fields, including the rest of the file data, such as `contentType`, `filename`, etc.
 
+### Download Files
+
+In `HexabaseClient` I see this [`download` function](https://github.com/hexabase/hexabase-js/blob/31fa255ed184e0e73d37bfcda8eaa9979fbfeb1e/src/HexabaseClient.ts#L203-L205).
 
