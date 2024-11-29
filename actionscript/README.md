@@ -1,5 +1,9 @@
 # ActionScript
 
+## Major Topics TOC
+
+- [Calling APIs in ActionScript](./api.md)
+
 ## Tips and Tricks
 
 ActionScript in its current form (Nov 2024) can be tricky to use, so here are some helpful things I've learned as I've been using it.
@@ -20,9 +24,10 @@ This is not ideal at all, and one (sort of naive) way to solve this is to just p
 I was doing this initially, since that just seemed like my only option, but one simple work around will help you find out what errors are occurring and perhaps even where:
 
 This is how every ActionScript starts:
+
 ```javascript
 async function main(data) {
-    // ...
+  // ...
 }
 ```
 
@@ -30,16 +35,16 @@ What if you simply wrap this function in a `try - catch`? For example, this is s
 
 ```javascript
 async function main(data) {
-    try {
-        await main1(data);
-    } catch (err) {
-        logger.log("runtime error:", err)
-    }
+  try {
+    await main1(data);
+  } catch (err) {
+    logger.log("runtime error:", err);
+  }
 }
 
 async function main1(data) {
-    // actual logic goes here
-    // ...
+  // actual logic goes here
+  // ...
 }
 ```
 
